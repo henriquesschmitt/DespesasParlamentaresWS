@@ -3,7 +3,7 @@ package com.despesas.ws.bd;
 import java.util.List;
 
 import com.despesas.ws.dominio.Despesa;
-import com.despesas.ws.util.copy.EntityManagerProducer;
+import com.despesas.ws.util.EntityManagerProducer;
 
 public class DespesaBD {
     

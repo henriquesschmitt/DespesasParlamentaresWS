@@ -1,4 +1,4 @@
-package com.despesas.ws.util.copy;
+package com.despesas.ws.util;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
