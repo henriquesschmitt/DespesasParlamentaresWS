@@ -8,6 +8,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import com.despesas.ws.bd.ParlamentarBD;
+import com.despesas.ws.bd.UsuarioBD;
 
 @Path("/parlamentar")
 public class ParlamentarWS {
@@ -28,5 +29,13 @@ public class ParlamentarWS {
         }
 		
 		return Response.ok(parlamentarBD.getParlamentarByNome(nomeParaConsulta.toString())).build();
+	}
+	
+	@GET
+	@Path("all")
+	@Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
+	public Response getAll() {
+		ParlamentarBD parlamentarBD = new ParlamentarBD();
+		return Response.ok(parlamentarBD.getParlamentares()).build();
 	}
 }

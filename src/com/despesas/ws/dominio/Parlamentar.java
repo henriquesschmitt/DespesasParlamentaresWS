@@ -3,8 +3,6 @@ package com.despesas.ws.dominio;
 import java.math.BigDecimal;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -20,9 +18,10 @@ public class Parlamentar {
     private String partido;
     private BigDecimal gastoTotal;
     private BigDecimal gastoDia;
+    private String mandato;
 
     public Parlamentar(String codigo, String nome, String sexo, String cargo, String urlFoto, String partido, 
-    		BigDecimal gastoTotal, BigDecimal gastoDia) {
+    		BigDecimal gastoTotal, BigDecimal gastoDia, String mandato) {
         this.codigo = codigo;
         this.nome = nome;
         this.sexo = sexo;
@@ -31,6 +30,7 @@ public class Parlamentar {
         this.partido = partido;
         this.gastoTotal = gastoTotal;
         this.gastoDia = gastoDia;
+        this.mandato = mandato;
     }
     
     public Parlamentar(){}
@@ -99,4 +99,12 @@ public class Parlamentar {
     public void setGastoDia(BigDecimal gastoDia) {
         this.gastoDia = gastoDia;
     }
+
+    public String getMandato() {
+		return mandato;
+	}
+
+    public void setMandato(String mandato) {
+		this.mandato = mandato;
+	}
 }

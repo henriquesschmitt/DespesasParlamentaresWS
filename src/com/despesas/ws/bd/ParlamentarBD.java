@@ -13,5 +13,9 @@ public class ParlamentarBD {
 		return emp.create().createQuery("SELECT p FROM Parlamentar p WHERE UPPER(p.nome) like :paramNome")
 				.setParameter("paramNome", nome).getResultList();
 	}
+	
+	public List<Parlamentar> getParlamentares() {
+		return emp.create().createQuery("SELECT p FROM Parlamentar p").getResultList();
+	}
 
 }
